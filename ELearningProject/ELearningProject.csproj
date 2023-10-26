@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
@@ -140,6 +141,10 @@
     <Compile Include="Migrations\202310251639588_mig1.cs" />
     <Compile Include="Migrations\202310251639588_mig1.designer.cs">
       <DependentUpon>202310251639588_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310261358349_mig_add_table_column.cs" />
+    <Compile Include="Migrations\202310261358349_mig_add_table_column.designer.cs">
+      <DependentUpon>202310261358349_mig_add_table_column.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -803,6 +808,10 @@
     <Content Include="Views\AdminLayout\PartialPreloader.cshtml" />
     <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
     <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\AddInstructor.cshtml" />
+    <Content Include="Views\Instructor\UpdateInstructor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -824,6 +833,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202310251639588_mig1.resx">
       <DependentUpon>202310251639588_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310261358349_mig_add_table_column.resx">
+      <DependentUpon>202310261358349_mig_add_table_column.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

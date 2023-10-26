@@ -1,12 +1,15 @@
 ﻿@model ELearningProject.DAL.Entities.Category
 @{
-    ViewBag.Title = "AddCategory";
+    ViewBag.Title = "UpdateCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>AddCategory</h2>
+<h2>UpdateCategory</h2>
 
 <form method="post">
+    <label>Kategori Adı</label>
+    @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
+    <br />
     <label>Kategori Adı</label>
     @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
     <br />
