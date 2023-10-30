@@ -1,0 +1,39 @@
+﻿@model List<ELearningProject.DAL.Entities.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+        <th>Başlık</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @if (ViewBag.testimonialCount == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            Referans kaydı bulunmamaktadır.
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TestimonialID</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Title</td>
+                <td>@item.ImageURL</td>
+                <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    }
+</table>
+<a href="/Testimonial/AddTestimonial/" class="btn btn-outline-primary">Öğrenci Ekle</a>
