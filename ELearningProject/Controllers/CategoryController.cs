@@ -14,6 +14,7 @@ namespace ELearningProject.Controllers
         // GET: Category
         public ActionResult Index()
         {
+            ViewBag.categoryCount = context.Categories.Count();
             var values = context.Categories.ToList();
             return View(values);
         }
