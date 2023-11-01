@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
@@ -171,6 +172,10 @@
     <Compile Include="Migrations\202310301912395_mig_add_courseRegister.cs" />
     <Compile Include="Migrations\202310301912395_mig_add_courseRegister.designer.cs">
       <DependentUpon>202310301912395_mig_add_courseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.cs" />
+    <Compile Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.designer.cs">
+      <DependentUpon>202311011551360_mig_add_ınstructor_titleandcoverımage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -976,6 +981,11 @@
     <Content Include="Templates\elearning-template\scss\bootstrap\scss\_type.scss" />
     <Content Include="Templates\elearning-template\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="Templates\elearning-template\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Views\Course\AddCourse.cshtml" />
+    <Content Include="Views\Course\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorAnalysis\Index.cshtml" />
+    <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1015,6 +1025,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310301912395_mig_add_courseRegister.resx">
       <DependentUpon>202310301912395_mig_add_courseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.resx">
+      <DependentUpon>202311011551360_mig_add_ınstructor_titleandcoverımage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

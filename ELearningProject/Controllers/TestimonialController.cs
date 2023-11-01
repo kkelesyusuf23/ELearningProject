@@ -14,6 +14,7 @@ namespace ELearningProject.Controllers
         // GET: Testimonial
         public ActionResult Index()
         {
+            TempData["Location"] = "Referans";
             ViewBag.testimonialCount = context.Testimonials.Count();
             var values = context.Testimonials.ToList();
             return View(values);

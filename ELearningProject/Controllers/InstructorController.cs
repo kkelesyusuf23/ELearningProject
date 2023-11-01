@@ -14,6 +14,7 @@ namespace ELearningProject.Controllers
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
+            TempData["Location"] = "Eğitmen";
             ViewBag.ınstructorCount = context.Instructors.Count();
             var values = context.Instructors.ToList();
             return View(values);

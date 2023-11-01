@@ -14,6 +14,7 @@ namespace ELearningProject.Controllers
         // GET: Student
         public ActionResult Index()
         {
+            TempData["Location"] = "Öğrenci";
             ViewBag.studentCount = context.Students.Count();
             var values = context.Students.ToList();
             return View(values);

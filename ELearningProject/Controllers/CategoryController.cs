@@ -14,6 +14,7 @@ namespace ELearningProject.Controllers
         // GET: Category
         public ActionResult Index()
         {
+            TempData["Location"] = "Kategori";
             ViewBag.categoryCount = context.Categories.Count();
             var values = context.Categories.ToList();
             return View(values);
