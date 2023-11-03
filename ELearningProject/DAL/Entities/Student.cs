@@ -13,5 +13,8 @@ namespace ELearningProject.DAL.Entities
 		public string Mail { get; set; }
 		public string Password { get; set; }
 		public List<CourseRegister> CourseRegisters { get; set; }
-	}
+        public List<Comment> Comments { get; set; }
+        public List<Review> Reviews { get; set; }
+        public List<Process> Processes { get; set; }
+    }
 }

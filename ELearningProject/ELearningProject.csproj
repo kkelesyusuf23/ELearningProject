@@ -133,13 +133,18 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
+    <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
+    <Compile Include="DAL\Entities\Process.cs" />
+    <Compile Include="DAL\Entities\Review.cs" />
     <Compile Include="DAL\Entities\Student.cs" />
     <Compile Include="DAL\Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,6 +181,26 @@
     <Compile Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.cs" />
     <Compile Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.designer.cs">
       <DependentUpon>202311011551360_mig_add_ınstructor_titleandcoverımage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311011629458_mig_add_table_comment.cs" />
+    <Compile Include="Migrations\202311011629458_mig_add_table_comment.designer.cs">
+      <DependentUpon>202311011629458_mig_add_table_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311011637268_mig_add_relation_comment.cs" />
+    <Compile Include="Migrations\202311011637268_mig_add_relation_comment.designer.cs">
+      <DependentUpon>202311011637268_mig_add_relation_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311011912271_mig_add_table_review.cs" />
+    <Compile Include="Migrations\202311011912271_mig_add_table_review.designer.cs">
+      <DependentUpon>202311011912271_mig_add_table_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311011955090_mig_add_review_relation_studentandcourse.cs" />
+    <Compile Include="Migrations\202311011955090_mig_add_review_relation_studentandcourse.designer.cs">
+      <DependentUpon>202311011955090_mig_add_review_relation_studentandcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311031147490_mig_add_table_process.cs" />
+    <Compile Include="Migrations\202311031147490_mig_add_table_process.designer.cs">
+      <DependentUpon>202311031147490_mig_add_table_process.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -986,6 +1011,10 @@
     <Content Include="Views\InstructorAnalysis\Index.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\MyCourseList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1028,6 +1057,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311011551360_mig_add_ınstructor_titleandcoverımage.resx">
       <DependentUpon>202311011551360_mig_add_ınstructor_titleandcoverımage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011629458_mig_add_table_comment.resx">
+      <DependentUpon>202311011629458_mig_add_table_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011637268_mig_add_relation_comment.resx">
+      <DependentUpon>202311011637268_mig_add_relation_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011912271_mig_add_table_review.resx">
+      <DependentUpon>202311011912271_mig_add_table_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311011955090_mig_add_review_relation_studentandcourse.resx">
+      <DependentUpon>202311011955090_mig_add_review_relation_studentandcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311031147490_mig_add_table_process.resx">
+      <DependentUpon>202311031147490_mig_add_table_process.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
