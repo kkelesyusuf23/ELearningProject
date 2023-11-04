@@ -1,5 +1,4 @@
-﻿using ELearningProject.DAL.Context;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,38 +6,38 @@ using System.Web.Mvc;
 
 namespace ELearningProject.Controllers
 {
-    public class AdminLayoutController : Controller
+    public class DefaultController : Controller
     {
-        ELearningContext context = new ELearningContext();
+        // GET: Default
         public ActionResult Index()
         {
             return View();
         }
-        public PartialViewResult PartialHead()
-		{
-            return PartialView();
-		}
-        public PartialViewResult PartialSideBar()
+        public PartialViewResult FeaturePartial()
         {
             return PartialView();
         }
-        public PartialViewResult PartialNavbar()
+        public PartialViewResult ServicePartial()
         {
             return PartialView();
         }
-        public PartialViewResult PartialPageRowTitle()
+        public PartialViewResult AboutPartial()
         {
             return PartialView();
         }
-        public PartialViewResult PartialPreloader()
+        public PartialViewResult CategoryPartial()
         {
             return PartialView();
         }
-        public PartialViewResult PartialFooter()
+        public PartialViewResult CoursePartial()
         {
             return PartialView();
         }
-        public PartialViewResult PartialScripts()
+        public PartialViewResult InstructorPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult TestimonialPartial()
         {
             return PartialView();
         }

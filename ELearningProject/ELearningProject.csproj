@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
@@ -1015,6 +1017,20 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\MyCourseList.cshtml" />
+    <Content Include="Views\UILayout\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\UILayout\HeadPartial.cshtml" />
+    <Content Include="Views\UILayout\SpinnerPartial.cshtml" />
+    <Content Include="Views\UILayout\NavbarPartial.cshtml" />
+    <Content Include="Views\UILayout\FooterPartial.cshtml" />
+    <Content Include="Views\UILayout\ScriptsPartial.cshtml" />
+    <Content Include="Views\Default\FeaturePartial.cshtml" />
+    <Content Include="Views\Default\ServicePartial.cshtml" />
+    <Content Include="Views\Default\AboutPartial.cshtml" />
+    <Content Include="Views\Default\CategoryPartial.cshtml" />
+    <Content Include="Views\Default\CoursePartial.cshtml" />
+    <Content Include="Views\Default\InstructorPartial.cshtml" />
+    <Content Include="Views\Default\TestimonialPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

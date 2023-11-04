@@ -13,6 +13,7 @@ namespace ELearningProject.Controllers
         // GET: Profile
         public ActionResult Index()
         {
+            TempData["Location"] = "Profil";
             var values = Session["CurrentMail"].ToString();
             ViewBag.mail = Session["CurrentMail"];
             ViewBag.NameSurname = context.Students.Where(x => x.Mail == values).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
