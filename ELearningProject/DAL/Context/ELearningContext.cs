@@ -18,5 +18,10 @@ namespace ELearningProject.DAL.Context
 		public DbSet<Comment> Comments { get; set; }
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<Process> Processes { get; set; }
+		public DbSet<Feature> Features { get; set; }
+		public DbSet<Service> Services { get; set; }
+		public DbSet<About> Abouts { get; set; }
+		public DbSet<AboutPurpose> AboutPurposes { get; set; }
+		public DbSet<Subscribe> Subscribes { get; set; }
 	}
 }

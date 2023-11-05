@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ELearningProject.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace ELearningProject.Controllers
 {
     public class DefaultController : Controller
     {
+        ELearningContext context = new ELearningContext();
         // GET: Default
         public ActionResult Index()
         {
@@ -15,31 +17,43 @@ namespace ELearningProject.Controllers
         }
         public PartialViewResult FeaturePartial()
         {
-            return PartialView();
+            var values = context.Features.ToList();
+            return PartialView(values);
         }
         public PartialViewResult ServicePartial()
         {
-            return PartialView();
+            var values = context.Services.ToList();
+            return PartialView(values);
         }
         public PartialViewResult AboutPartial()
         {
-            return PartialView();
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult AboutPurposePartial()
+        {
+            var values = context.AboutPurposes.ToList();
+            return PartialView(values);
         }
         public PartialViewResult CategoryPartial()
         {
-            return PartialView();
+            var values = context.Categories.Take(4).ToList();
+            return PartialView(values);
         }
         public PartialViewResult CoursePartial()
         {
-            return PartialView();
+            var values = context.Courses.Take(3).ToList();
+            return PartialView(values);
         }
         public PartialViewResult InstructorPartial()
         {
-            return PartialView();
+            var values = context.Instructors.ToList();
+            return PartialView(values);
         }
         public PartialViewResult TestimonialPartial()
         {
-            return PartialView();
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
         }
     }
 }

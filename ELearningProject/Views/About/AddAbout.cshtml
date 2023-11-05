@@ -1,0 +1,23 @@
+﻿@model ELearningProject.DAL.Entities.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>AddAbout</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Alt Açıklama</label>
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-outline-success">Kaydet</button>
+</form>

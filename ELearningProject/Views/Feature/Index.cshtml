@@ -1,0 +1,43 @@
+﻿@model List<ELearningProject.DAL.Entities.Feature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Kısa Açıklama</th>
+        <th>Uzun Açıklama</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @if (ViewBag.featureCount == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            Öne Çıkan kaydı bulunmamaktadır.
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FeatureID</td>
+                <td>@item.Title</td>
+                <td>@item.SubTitle</td>
+                <td>@item.ShortDescription</td>
+                <td>@item.LongDescription</td>
+                <td>@item.ImageURL</td>
+                <td><a href="/Feature/DeleteFeature/@item.FeatureID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Feature/UpdateFeature/@item.FeatureID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    }
+</table>
+<a href="/Feature/AddFeature/" class="btn btn-outline-primary">Öne Çıkan Bilgisi Ekle</a>
