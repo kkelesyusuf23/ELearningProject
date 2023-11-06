@@ -23,5 +23,8 @@ namespace ELearningProject.DAL.Context
 		public DbSet<About> Abouts { get; set; }
 		public DbSet<AboutPurpose> AboutPurposes { get; set; }
 		public DbSet<Subscribe> Subscribes { get; set; }
+		public DbSet<ContactMap> ContactMaps { get; set; }
+		public DbSet<ContactInformation> ContactInformations { get; set; }
+		public DbSet<Contact> Contacts { get; set; }
 	}
 }

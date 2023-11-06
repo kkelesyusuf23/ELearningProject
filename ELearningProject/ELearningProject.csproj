@@ -131,21 +131,31 @@
     <Compile Include="Controllers\AboutPurposeController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ContactInformationController.cs" />
+    <Compile Include="Controllers\ContactMapController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\LoginCheckController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\UIAboutController.cs" />
+    <Compile Include="Controllers\UIContactController.cs" />
+    <Compile Include="Controllers\UICourseController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
+    <Compile Include="DAL\Entities\Contact.cs" />
+    <Compile Include="DAL\Entities\ContactInformation.cs" />
+    <Compile Include="DAL\Entities\ContactMap.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
@@ -235,6 +245,34 @@
     <Compile Include="Migrations\202311051412036_mig_add_table_subscribe.cs" />
     <Compile Include="Migrations\202311051412036_mig_add_table_subscribe.designer.cs">
       <DependentUpon>202311051412036_mig_add_table_subscribe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061152160_mig_add_table_contactinformation.cs" />
+    <Compile Include="Migrations\202311061152160_mig_add_table_contactinformation.designer.cs">
+      <DependentUpon>202311061152160_mig_add_table_contactinformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061213126_mig_add_tablecolumn_contactınformation.cs" />
+    <Compile Include="Migrations\202311061213126_mig_add_tablecolumn_contactınformation.designer.cs">
+      <DependentUpon>202311061213126_mig_add_tablecolumn_contactınformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061222029_mig_add_tablecolumn_contactınformation_back.cs" />
+    <Compile Include="Migrations\202311061222029_mig_add_tablecolumn_contactınformation_back.designer.cs">
+      <DependentUpon>202311061222029_mig_add_tablecolumn_contactınformation_back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061226428_mig_add_tablecolumn_contactınformation_backk.cs" />
+    <Compile Include="Migrations\202311061226428_mig_add_tablecolumn_contactınformation_backk.designer.cs">
+      <DependentUpon>202311061226428_mig_add_tablecolumn_contactınformation_backk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061235139_mig_delete_table_contactınformation.cs" />
+    <Compile Include="Migrations\202311061235139_mig_delete_table_contactınformation.designer.cs">
+      <DependentUpon>202311061235139_mig_delete_table_contactınformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061241399_mig_add_tables_contact.cs" />
+    <Compile Include="Migrations\202311061241399_mig_add_tables_contact.designer.cs">
+      <DependentUpon>202311061241399_mig_add_tables_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061438168_mig_add_table_contactmessage.cs" />
+    <Compile Include="Migrations\202311061438168_mig_add_table_contactmessage.designer.cs">
+      <DependentUpon>202311061438168_mig_add_table_contactmessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1074,6 +1112,29 @@
     <Content Include="Views\Feature\Index.cshtml" />
     <Content Include="Views\Feature\AddFeature.cshtml" />
     <Content Include="Views\Feature\UpdateFeature.cshtml" />
+    <Content Include="Views\UIAbout\Index.cshtml" />
+    <Content Include="Views\UIAbout\PageFeaturePartial.cshtml" />
+    <Content Include="Views\UICourse\Index.cshtml" />
+    <Content Include="Views\UICourse\PageFeaturePartial.cshtml" />
+    <Content Include="Views\UICourse\CategoryPartial.cshtml" />
+    <Content Include="Views\UICourse\CoursePartial.cshtml" />
+    <Content Include="Views\UICourse\TestimonialPartial.cshtml" />
+    <Content Include="Views\UIContact\Index.cshtml" />
+    <Content Include="Views\UIContact\PageFeaturePartial.cshtml" />
+    <Content Include="Views\UIContact\ContactInformationPartial.cshtml" />
+    <Content Include="Views\UIContact\ContactInformationMapPartial.cshtml" />
+    <Content Include="Views\UIContact\ContactPartial.cshtml" />
+    <Content Include="Views\LoginCheck\Index.cshtml" />
+    <Content Include="Views\LoginCheck\PageFeaturePartial.cshtml" />
+    <Content Include="Views\LoginCheck\LoginCheckPartial.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\DetailContact.cshtml" />
+    <Content Include="Views\ContactMap\Index.cshtml" />
+    <Content Include="Views\ContactMap\AddContactMap.cshtml" />
+    <Content Include="Views\ContactMap\UpdateContactMap.cshtml" />
+    <Content Include="Views\ContactInformation\Index.cshtml" />
+    <Content Include="Views\ContactInformation\AddContactInformation.cshtml" />
+    <Content Include="Views\ContactInformation\UpdateContactInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1149,6 +1210,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311051412036_mig_add_table_subscribe.resx">
       <DependentUpon>202311051412036_mig_add_table_subscribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061152160_mig_add_table_contactinformation.resx">
+      <DependentUpon>202311061152160_mig_add_table_contactinformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061213126_mig_add_tablecolumn_contactınformation.resx">
+      <DependentUpon>202311061213126_mig_add_tablecolumn_contactınformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061222029_mig_add_tablecolumn_contactınformation_back.resx">
+      <DependentUpon>202311061222029_mig_add_tablecolumn_contactınformation_back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061226428_mig_add_tablecolumn_contactınformation_backk.resx">
+      <DependentUpon>202311061226428_mig_add_tablecolumn_contactınformation_backk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061235139_mig_delete_table_contactınformation.resx">
+      <DependentUpon>202311061235139_mig_delete_table_contactınformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061241399_mig_add_tables_contact.resx">
+      <DependentUpon>202311061241399_mig_add_tables_contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061438168_mig_add_table_contactmessage.resx">
+      <DependentUpon>202311061438168_mig_add_table_contactmessage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

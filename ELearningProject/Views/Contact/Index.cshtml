@@ -1,0 +1,38 @@
+﻿@model List<ELearningProject.DAL.Entities.Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İsim Soyisim</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Sil</th>
+        <th>Detay</th>
+    </tr>
+    @if (ViewBag.contactCount == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            Gelen mesaj bilgisi bulunmamaktadır.
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactID</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Mail</td>
+                <td>@item.Subject</td>
+                <td><a href="/About/DeleteAbout/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Contact/DetailContact/@item.ContactID" class="btn btn-outline-warning">Detay</a></td>
+            </tr>
+        }
+    }
+</table>

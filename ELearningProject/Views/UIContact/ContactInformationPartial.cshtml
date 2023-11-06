@@ -1,0 +1,18 @@
+﻿@model List<ELearningProject.DAL.Entities.ContactInformation>
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <h5>İletişimde Olalım!</h5>
+    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.</p>
+
+    @foreach (var item in Model)
+    {
+        <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                <i class="@item.InformationIcon"></i>
+            </div>
+            <div class="ms-3">
+                <h5 class="text-primary">@item.InformationTitle</h5>
+                <p class="mb-0">@item.Information</p>
+            </div>
+        </div>
+    }
+</div>

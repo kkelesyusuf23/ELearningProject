@@ -1,0 +1,34 @@
+﻿@model ELearningProject.DAL.Entities.Contact
+<div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="NameSurname" placeholder="Your Name">
+                    <label for="name">İsim Soyisim</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control" name="Mail" placeholder="Your Email">
+                    <label for="email">Mail Adresiniz</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="Subject" placeholder="Subject">
+                    <label for="subject">Konu</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a message here" name="Message" style="height: 150px"></textarea>
+                    <label for="message">Mesaj</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Mesaj Gönder</button>
+            </div>
+        </div>
+    </form>
+</div>

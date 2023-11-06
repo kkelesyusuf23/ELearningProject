@@ -1,0 +1,23 @@
+﻿@model ELearningProject.DAL.Entities.ContactInformation
+@{
+    ViewBag.Title = "AddContactInformation";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>AddContactInformation</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.InformationTitle, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>İkon</label>
+    @Html.TextBoxFor(x => x.InformationIcon, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Bilgi</label>
+    @Html.TextBoxFor(x => x.Information, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-outline-success">Kaydet</button>
+</form>

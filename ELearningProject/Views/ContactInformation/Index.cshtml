@@ -1,0 +1,39 @@
+﻿@model List<ELearningProject.DAL.Entities.ContactInformation>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İkon</th>
+        <th>Bilgi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @if (ViewBag.contactInformationCount == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            Harita bilgisi bulunmamaktadır.
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactInformationID</td>
+                <td>@item.InformationTitle</td>
+                <td>@item.InformationIcon</td>
+                <td>@item.Information</td>
+                <td><a href="/ContactInformation/DeleteContactInformation/@item.ContactInformationID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/ContactInformation/UpdateContactInformation/@item.ContactInformationID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    }
+</table>
+<a href="/ContactInformation/AddContactInformation/" class="btn btn-outline-primary">İletişim Bilgisi Ekle</a>
