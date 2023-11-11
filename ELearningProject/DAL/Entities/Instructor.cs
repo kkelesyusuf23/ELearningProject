@@ -16,6 +16,8 @@ namespace ELearningProject.DAL.Entities
 		public string ImageURL { get; set; }
 		public string Title { get; set; }
 		public string CoverImage { get; set; }
+		public string Email { get; set; }
+		public string Password { get; set; }
         public List<Course> Courses { get; set; }
     }
 }

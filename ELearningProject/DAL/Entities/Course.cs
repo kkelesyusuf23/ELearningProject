@@ -20,6 +20,7 @@ namespace ELearningProject.DAL.Entities
         public List<Comment> Comments { get; set; }
         public List<Review> Reviews { get; set; }
         public List<Process> Processes { get; set; }
+        public List<CourseWatchList> CourseWatchLists { get; set; }
 
     }
 }

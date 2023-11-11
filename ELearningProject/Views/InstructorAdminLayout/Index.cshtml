@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "InstructorAdminLayout")
+
+<body class="fix-header fix-sidebar card-no-border">
+    @Html.Action("PartialPreloader", "InstructorAdminLayout")
+
+    <div id="main-wrapper">
+
+        @Html.Action("PartialSideBar", "InstructorAdminLayout")
+        @Html.Action("PartialNavbar", "InstructorAdminLayout")
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                @Html.Action("PartialPageRowTitle", "InstructorAdminLayout")
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Action("PartialFooter", "InstructorAdminLayout")
+
+        </div>
+    </div>
+    @Html.Action("PartialScripts", "InstructorAdminLayout")
+</body>
+
+</html>
