@@ -29,7 +29,38 @@ namespace ELearningProject.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult UpdateInstructorCourse(int id)
+        {
+            List<SelectListItem> categories = (from x in context.Categories.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CategoryName,
+                                                   Value = x.CategoryID.ToString()
+                                               }).ToList();
+            ViewBag.categories = categories;
+            List<SelectListItem> instructors = (from x in context.Instructors.ToList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.Name + " " + x.Surname,
+                                                   Value = x.InstructorID.ToString()
+                                               }).ToList();
+            ViewBag.instructors = instructors;
 
+            var value = context.Courses.Where(x => x.CourseID == id).FirstOrDefault();
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateInstructorCourse(Course course)
+        {
+            var value = context.Courses.Find(course.CourseID);
+            value.Title = course.Title;
+            value.Price = course.Price;
+            value.Duration = course.Duration;
+            value.ImageURL = course.ImageURL;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
         [HttpGet]
         public ActionResult AddVideo(int id)
         {

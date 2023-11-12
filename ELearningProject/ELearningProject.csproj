@@ -1173,6 +1173,7 @@
     <Content Include="Views\InstructorAdminLayout\PartialScripts.cshtml" />
     <Content Include="Views\InstructorCourse\Index.cshtml" />
     <Content Include="Views\InstructorCourse\AddVideo.cshtml" />
+    <Content Include="Views\InstructorCourse\UpdateInstructorCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
