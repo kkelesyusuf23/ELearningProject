@@ -142,6 +142,7 @@
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\InstructorCourseController.cs" />
+    <Compile Include="Controllers\InstructorStudentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -1174,6 +1175,7 @@
     <Content Include="Views\InstructorCourse\Index.cshtml" />
     <Content Include="Views\InstructorCourse\AddVideo.cshtml" />
     <Content Include="Views\InstructorCourse\UpdateInstructorCourse.cshtml" />
+    <Content Include="Views\InstructorStudent\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -29,6 +29,13 @@ namespace ELearningProject.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteCourseWatchList(int id)
+        {
+            var value = context.CourseWatchLists.Find(id);
+            context.CourseWatchLists.Remove(value);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
         [HttpGet]
         public ActionResult UpdateInstructorCourse(int id)
         {
@@ -66,6 +73,7 @@ namespace ELearningProject.Controllers
         {
             TempData["Location"] = "Video";
             ViewBag.id = id;
+            ViewBag.courseName = context.Courses.Where(x => x.CourseID == id).Select(x => x.Title).FirstOrDefault();
             var values = context.CourseWatchLists.Where(x => x.CourseID == id).ToList();
             return View(values);
         }
