@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ELearningProject.Controllers
 {
@@ -43,6 +44,11 @@ namespace ELearningProject.Controllers
         public PartialViewResult PartialScripts()
         {
             return PartialView();
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

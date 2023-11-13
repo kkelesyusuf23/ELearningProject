@@ -13,24 +13,27 @@ namespace ELearningProject.Controllers
         // GET: InstructorAnalysis
         public ActionResult Index()
         {
-            TempData["Location"] = "Dashboard";
+            TempData["Location"] = "Profil";
             return View();
         }
         public PartialViewResult InstructorPanelPartial()
         {
-            int id = 1;
-            var values = context.Instructors.Where(x => x.InstructorID == id).ToList();
-            var v1 = context.Instructors.Where(x => x.Name == "Yusuf" && x.Surname == "Keleş").Select(y => y.InstructorID).FirstOrDefault();
+            string value = Session["CurrentMail"].ToString();
+            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
+            var values = context.Instructors.Where(x => x.InstructorID == ınstructorID).ToList();
+            var v1 = context.Instructors.Where(x => x.InstructorID == ınstructorID).Select(y => y.InstructorID).FirstOrDefault();
 
-            ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == 2).Count();
+            ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == ınstructorID).Count();
             var v2 = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
             ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
             return PartialView(values);
         }
         public PartialViewResult CommentPartial()
         {
-            var v1 = context.Instructors.Where(x => x.Name == "Yusuf" && x.Surname == "Keleş").Select(y => y.InstructorID).FirstOrDefault();
-            ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == 2).Count();
+            string value = Session["CurrentMail"].ToString();
+            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
+            var v1 = context.Instructors.Where(x => x.InstructorID == ınstructorID).Select(y => y.InstructorID).FirstOrDefault();
+            ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == ınstructorID).Count();
             var v2 = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
             ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
             var v3 = context.Comments.Where(x => v2.Contains(x.CourseID)).ToList();
@@ -38,7 +41,16 @@ namespace ELearningProject.Controllers
         }
         public PartialViewResult CourseListByInstructor()
         {
-            var values = context.Courses.Where(x => x.InstructorID == 1).ToList();
+            string value = Session["CurrentMail"].ToString();
+            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
+            var values = context.Courses.Where(x => x.InstructorID == ınstructorID).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult InstructorContactInformation()
+        {
+            string value = Session["CurrentMail"].ToString();
+            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
+            var values = context.Instructors.Where(x => x.InstructorID == ınstructorID).FirstOrDefault();
             return PartialView(values);
         }
     }

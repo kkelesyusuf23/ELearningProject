@@ -27,5 +27,6 @@ namespace ELearningProject.DAL.Context
 		public DbSet<ContactInformation> ContactInformations { get; set; }
 		public DbSet<Contact> Contacts { get; set; }
 		public DbSet<CourseWatchList> CourseWatchLists { get; set; }
+		public DbSet<Admin> Admins { get; set; }
 	}
 }

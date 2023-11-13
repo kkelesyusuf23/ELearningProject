@@ -39,6 +39,7 @@ namespace ELearningProject.Controllers
         [HttpGet]
         public ActionResult UpdateInstructorCourse(int id)
         {
+            TempData["Location"] = "Kurs Güncelleme";
             List<SelectListItem> categories = (from x in context.Categories.ToList()
                                                select new SelectListItem
                                                {
@@ -60,6 +61,7 @@ namespace ELearningProject.Controllers
         [HttpPost]
         public ActionResult UpdateInstructorCourse(Course course)
         {
+            TempData["Location"] = "Kurs Güncelleme";
             var value = context.Courses.Find(course.CourseID);
             value.Title = course.Title;
             value.Price = course.Price;

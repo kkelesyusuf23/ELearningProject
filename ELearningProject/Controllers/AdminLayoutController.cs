@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ELearningProject.Controllers
 {
@@ -24,6 +25,9 @@ namespace ELearningProject.Controllers
         }
         public PartialViewResult PartialNavbar()
         {
+            string values = Session["CurrentUsername"].ToString();
+            ViewBag.adminUsername = values;
+            int id = context.Admins.Where(x => x.Username == values).Select(y => y.AdminID).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialPageRowTitle()
@@ -41,6 +45,11 @@ namespace ELearningProject.Controllers
         public PartialViewResult PartialScripts()
         {
             return PartialView();
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

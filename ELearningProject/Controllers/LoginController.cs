@@ -23,8 +23,7 @@ namespace ELearningProject.Controllers
         }
         public PartialViewResult LoginCheckPartial()
         {
-            var values = context.Services.ToList();
-            return PartialView(values);
+            return PartialView();
         }
 
         [HttpGet]
@@ -61,6 +60,25 @@ namespace ELearningProject.Controllers
                 Session["CurrentMail"] = values.Email;
                 Session.Timeout = 60;
                 return RedirectToAction("Index", "InstructorCourse");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AdminIndex()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminIndex(Admin admin)
+        {
+            var values = context.Admins.FirstOrDefault(x => x.Username == admin.Username && x.Password == admin.Password);
+            if (values != null)
+            {
+                FormsAuthentication.SetAuthCookie(values.Username, false);
+                Session["CurrentUsername"] = values.Username;
+                Session.Timeout = 60;
+                return RedirectToAction("Index", "Category");
             }
             return View();
         }
