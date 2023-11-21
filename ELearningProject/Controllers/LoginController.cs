@@ -40,7 +40,7 @@ namespace ELearningProject.Controllers
                 FormsAuthentication.SetAuthCookie(values.Mail, false);
                 Session["CurrentMail"] = values.Mail;
                 Session.Timeout = 60;
-                return RedirectToAction("Index", "Profile");
+                return RedirectToAction("Index", "StudentProfile");
             }
             return View();
         }

@@ -145,8 +145,10 @@
     <Compile Include="Controllers\InstructorProfileController.cs" />
     <Compile Include="Controllers\InstructorStudentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\StudentProfileController.cs" />
+    <Compile Include="Controllers\StudentAdminLayoutController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentSettingController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Controllers\UIAboutController.cs" />
     <Compile Include="Controllers\UIContactController.cs" />
@@ -308,6 +310,7 @@
       <DependentUpon>202311131120059_mig_add_table_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ReviewCommentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -779,6 +782,8 @@
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-wind-names.css" />
     <Content Include="Templates\material-lite-master\table-basic.html" />
+    <Content Include="Templates\starDocuments\css.css" />
+    <Content Include="Templates\starDocuments\js.js" />
     <Content Include="Templates\web\css\font-awesome.css" />
     <Content Include="Templates\web\css\style.css" />
     <Content Include="Templates\web\images\1600w-1iOEJNrdkZc.jpg" />
@@ -1132,8 +1137,6 @@
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Profile\MyCourseList.cshtml" />
     <Content Include="Views\UILayout\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\UILayout\HeadPartial.cshtml" />
@@ -1205,10 +1208,23 @@
     <Content Include="Templates\web\fonts\fontawesome-webfont.woff" />
     <Content Include="Templates\web\fonts\fontawesome-webfont.woff2" />
     <Content Include="Templates\web\fonts\FontAwesome.otf" />
+    <Content Include="Views\StudentAdminLayout\Index.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialHead.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialSideBar.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialNavbar.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialPageRowTitle.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialFooter.cshtml" />
+    <Content Include="Views\StudentAdminLayout\PartialScripts.cshtml" />
+    <Content Include="Views\StudentProfile\MyCourseList.cshtml" />
+    <Content Include="Views\StudentSetting\Index.cshtml" />
+    <Content Include="Views\StudentProfile\WatchCourse.cshtml" />
+    <Content Include="Views\StudentProfile\RewievCourse.cshtml" />
+    <Content Include="Views\StudentProfile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\StudentComment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
