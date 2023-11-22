@@ -1,0 +1,19 @@
+﻿@model ELearningProject.DAL.Entities.Student
+<div class="card">
+    <img class="card-img-top" src="https://as2.ftcdn.net/v2/jpg/02/01/38/87/1000_F_201388714_cv8jSWUK8SRM9miJUsQkfZpNarg7UuMw.jpg" alt="Card image cap">
+    <div class="card-block little-profile text-center">
+        <h3 class="m-b-0">@Model.Name @Model.Surname</h3>
+        <p>@Model.Mail</p>
+        <div class="row text-center m-t-20">
+            <div class="col-lg-4 col-md-4 m-t-20">
+                <h3 class="m-b-0 font-light">@ViewBag.StudentCourseCount</h3><small>Kurslarım</small>
+            </div>
+            <div class="col-lg-4 col-md-4 m-t-20">
+                <h3 class="m-b-0 font-light">@ViewBag.StudentCommentCount</h3><small>Yorum Sayısı</small>
+            </div>
+            <div class="col-lg-4 col-md-4 m-t-20">
+                <h3 class="m-b-0 font-light">@ViewBag.StudentReviewScoreAverage</h3><small>Ortalama Değerlendirme</small>
+            </div>
+        </div>
+    </div>
+</div>

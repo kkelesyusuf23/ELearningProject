@@ -46,10 +46,5 @@ namespace ELearningProject.Controllers
         {
             return PartialView();
         }
-        public ActionResult LogOut()
-        {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Login");
-        }
     }
 }

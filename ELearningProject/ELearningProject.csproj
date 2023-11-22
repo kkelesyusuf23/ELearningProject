@@ -1221,10 +1221,13 @@
     <Content Include="Views\StudentProfile\WatchCourse.cshtml" />
     <Content Include="Views\StudentProfile\RewievCourse.cshtml" />
     <Content Include="Views\StudentProfile\Index.cshtml" />
+    <Content Include="Views\StudentProfile\StudentInformationPartial.cshtml" />
+    <Content Include="Views\StudentProfile\StudentCommentList.cshtml" />
+    <Content Include="Views\StudentProfile\StudentProfilePartial.cshtml" />
+    <Content Include="Views\StudentProfile\StudentCourseBuy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\StudentComment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

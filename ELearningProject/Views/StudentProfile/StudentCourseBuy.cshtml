@@ -1,0 +1,39 @@
+﻿@model List<ELearningProject.DAL.Entities.Course>
+@{
+    ViewBag.Title = "StudentCourseBuy";
+    Layout = "~/Views/StudentAdminLayout/Index.cshtml";
+}
+
+<div class="container" style="width: 100%; border: solid 1px #cdbdbd; height: 600px; overflow: auto;">
+    <br />
+    <h2>Kurslar</h2><hr />
+
+    <div class="container">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-primary bg-light-primary" style="text-align:center" role="alert">
+                @TempData["Message"]
+            </div>
+        }
+    </div>
+
+    <div class="container" style="height: 450px; width:100%">
+        @using (Html.BeginForm("StudentCourseBuy", "StudentProfile", FormMethod.Post))
+        {
+            foreach (var item in Model)
+            {
+                <div class="container" style="width: 33%; float: left">
+                    <form action="@Url.Action("StudentCourseBuy", "StudentProfile")" method="post">
+                        <input type="hidden" name="courseID" value="@item.CourseID" />
+                        <iframe width="410" height="315" src="@item.ImageURL" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br />
+                        <p>@item.Title</p>
+                        <button type="submit" class="btn btn-outline-success">Kursu Ekle</button><br /><br />
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+

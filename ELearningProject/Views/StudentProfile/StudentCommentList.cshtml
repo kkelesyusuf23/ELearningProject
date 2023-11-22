@@ -1,0 +1,22 @@
+﻿@model List<ELearningProject.DAL.Entities.Comment>
+
+<div class="tab-pane active" id="home" role="tabpanel">
+    <div class="card-block">
+        <div class="profiletimeline">
+            @foreach (var item in Model)
+            {
+                <div class="sl-item">
+                    <div class="sl-left"> <img src="https://as2.ftcdn.net/v2/jpg/02/01/38/87/1000_F_201388714_cv8jSWUK8SRM9miJUsQkfZpNarg7UuMw.jpg" alt="user" class="img-circle"> </div>
+                    <div class="sl-right">
+                        <div>
+                            <a href="#" class="link">@ViewBag.studentNameSurname</a> <span class="sl-date">@item.CommentDate</span>
+                            <blockquote class="m-t-10">
+                                @item.CommentText
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
