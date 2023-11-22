@@ -155,7 +155,7 @@ namespace ELearningProject.Controllers
 
             if (isRegistered)
             {
-                TempData["Message"] = "Bu kursa zaten kayıtlısınız!";
+                TempData["Message"] = "Bu kursa kayıtlısınız!";
             }
             else
             {

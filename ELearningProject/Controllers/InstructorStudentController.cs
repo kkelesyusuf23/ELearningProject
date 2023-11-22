@@ -15,8 +15,9 @@ namespace ELearningProject.Controllers
         {
             TempData["Location"] = "Öğrencilerim";
             string value = Session["CurrentMail"].ToString();
-            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
-            var instructorStudents = context.CourseRegisters.Where(x => x.Course.InstructorID == ınstructorID).Select(x => x.Student).ToList();
+            int instructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
+            var includetables = context.CourseRegisters.Include("Course").Include("Student");
+            var instructorStudents = includetables.Where(x => x.Course.InstructorID == instructorID).ToList();
             return View(instructorStudents);
         }
     }

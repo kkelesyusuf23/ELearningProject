@@ -26,6 +26,7 @@ namespace ELearningProject.Controllers
         public PartialViewResult PartialNavbar()
         {
             var values = Session["CurrentMail"].ToString();
+            ViewBag.ımage = context.Instructors.Where(x => x.Email == values).Select(y => y.ImageURL).FirstOrDefault();
             ViewBag.egitmenIsim = context.Instructors.Where(x => x.Email == values).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
             return PartialView();
         }

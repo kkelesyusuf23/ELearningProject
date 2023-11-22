@@ -1,4 +1,4 @@
-﻿@model List<ELearningProject.DAL.Entities.Student>
+﻿@model List<ELearningProject.DAL.Entities.CourseRegister>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/InstructorAdminLayout/Index.cshtml";
@@ -14,14 +14,15 @@
         <th>Mail</th>
         <th>Kurs Adı</th>
     </tr>
-        @foreach (var item in Model)
-        {
-            count++;
-            <tr>
-                <td>@count</td>
-                <td>@item.Name @item.Surname</td>
-                <td>@item.Mail</td>
-                <td>kurs adı gelecek</td>
-            </tr>
-        }
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Student.Name @item.Student.Surname</td>
+            <td>@item.Student.Mail</td>
+            <td>@item.Course.Title</td> 
+        </tr>
+    }
 </table>
+

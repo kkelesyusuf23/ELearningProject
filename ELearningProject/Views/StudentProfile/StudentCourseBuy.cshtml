@@ -25,10 +25,9 @@
                 <div class="container" style="width: 33%; float: left">
                     <form action="@Url.Action("StudentCourseBuy", "StudentProfile")" method="post">
                         <input type="hidden" name="courseID" value="@item.CourseID" />
-                        <iframe width="410" height="315" src="@item.ImageURL" title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br />
-                        <p>@item.Title</p>
-                        <button type="submit" class="btn btn-outline-success">Kursu Ekle</button><br /><br />
+                        <img src="@item.ImageURL" alt="Course Image" style=" object-fit: cover;" />
+                        <div class="container" style="text-align:center">@item.Title</div>
+                        <button type="submit" class="btn btn-outline-success" style="width:100%">Kursu Ekle</button><br /><br />
                     </form>
                 </div>
             }

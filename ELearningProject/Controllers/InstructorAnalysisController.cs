@@ -26,6 +26,7 @@ namespace ELearningProject.Controllers
             ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == ınstructorID).Count();
             var v2 = context.Courses.Where(x => x.InstructorID == v1).Select(y => y.CourseID).ToList();
             ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
+            ViewBag.averageCourseReview = 9.5;
             return PartialView(values);
         }
         public PartialViewResult CommentPartial()
@@ -38,13 +39,6 @@ namespace ELearningProject.Controllers
             ViewBag.commentCount = context.Comments.Where(x => v2.Contains(x.CourseID)).Count();
             var v3 = context.Comments.Where(x => v2.Contains(x.CourseID)).ToList();
             return PartialView(v3);
-        }
-        public PartialViewResult CourseListByInstructor()
-        {
-            string value = Session["CurrentMail"].ToString();
-            int ınstructorID = context.Instructors.Where(x => x.Email == value).Select(y => y.InstructorID).FirstOrDefault();
-            var values = context.Courses.Where(x => x.InstructorID == ınstructorID).ToList();
-            return PartialView(values);
         }
         public PartialViewResult InstructorContactInformation()
         {

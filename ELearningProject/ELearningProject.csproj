@@ -788,6 +788,7 @@
     <Content Include="Templates\web\css\style.css" />
     <Content Include="Templates\web\images\1600w-1iOEJNrdkZc.jpg" />
     <Content Include="Templates\web\images\bg.jpg" />
+    <Content Include="Templates\web\images\pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg" />
     <Content Include="Templates\web\index.html" />
     <Content Include="Templates\web\w3layouts-License.txt" />
     <Content Include="Web.config" />

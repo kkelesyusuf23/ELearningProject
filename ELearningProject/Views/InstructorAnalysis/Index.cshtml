@@ -12,14 +12,11 @@
             <ul class="nav nav-tabs profile-tab" role="tablist">
                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Yorumlar</a> </li>
                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">İletişim</a> </li>
-                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Kurs Listesi</a> </li>
             </ul>
             <div class="tab-content">
                 @Html.Action("CommentPartial", "InstructorAnalysis")
 
                 @Html.Action("InstructorContactInformation", "InstructorAnalysis")
-
-                @Html.Action("CourseListByInstructor", "InstructorAnalysis")
             </div>
         </div>
     </div>
