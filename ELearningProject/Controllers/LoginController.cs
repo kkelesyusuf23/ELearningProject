@@ -1,5 +1,7 @@
 ﻿using ELearningProject.DAL.Context;
 using ELearningProject.DAL.Entities;
+using ELearningProject.ValidationRules;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,14 +36,26 @@ namespace ELearningProject.Controllers
         [HttpPost]
         public ActionResult StudentIndex(Student student)
         {
-            var values = context.Students.FirstOrDefault(x => x.Mail == student.Mail && x.Password == student.Password);
-            if(values != null)
-            {
-                FormsAuthentication.SetAuthCookie(values.Mail, false);
-                Session["CurrentMail"] = values.Mail;
-                Session.Timeout = 60;
-                return RedirectToAction("Index", "StudentProfile");
+            StudentValidator studentValidator = new StudentValidator();
+            ValidationResult results = studentValidator.Validate(student);
+			if (results.IsValid)
+			{
+                var values = context.Students.FirstOrDefault(x => x.Mail == student.Mail && x.Password == student.Password);
+                if (values != null)
+                {
+                    FormsAuthentication.SetAuthCookie(values.Mail, false);
+                    Session["CurrentMail"] = values.Mail;
+                    Session.Timeout = 60;
+                    return RedirectToAction("Index", "StudentProfile");
+                }
             }
+			else
+			{
+                foreach(var item in results.Errors)
+				{
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+				}
+			}
             return View();
         }
 

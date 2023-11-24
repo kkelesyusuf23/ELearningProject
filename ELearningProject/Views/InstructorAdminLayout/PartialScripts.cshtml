@@ -21,3 +21,13 @@
 <!-- Chart JS -->
 <script src="~/Templates/material-lite-master/js/dashboard1.js"></script>
 
+<script>
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("passwordField");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script>

@@ -1,4 +1,4 @@
-﻿
+﻿@model ELearningProject.DAL.Entities.Student
 @{
     Layout = null;
 }
@@ -32,24 +32,26 @@
         <form method="post">
             <div class="agile-field-txt">
                 <label><i class="fa fa-user" aria-hidden="true"></i> E-Mail </label>
-                <input type="text" name="Mail" placeholder="Email Adresinizi Girin" required="" />
+                @Html.TextBoxFor(model => model.Mail, new { required = "required" })
+                @Html.ValidationMessageFor(x => x.Mail)
             </div>
             <div class="agile-field-txt">
                 <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> Şifre </label>
-                <input type="password" name="Password" placeholder="Şifrenizi Girin" required="" id="myInput" />
+                @Html.PasswordFor(model => model.Password, new { required = "required", id = "myInput" })
+                @Html.ValidationMessageFor(x => x.Password)
                 <div class="agile_label">
                     <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
-                    <label class="check" for="check3">Şifreyi Göster</label>
+                    @Html.LabelFor(model => model.Password, new { @class = "check" })
                 </div>
-            </div>
+            </div>  
 
             <script>
                 function myFunction() {
-                    var x = document.getElementById("myInput"); 
-                    if (x.type === "Password") {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
                         x.type = "text";
                     } else {
-                        x.type = "Password";
+                        x.type = "password";
                     }
                 }
             </script>

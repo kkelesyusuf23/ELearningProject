@@ -16,10 +16,10 @@ namespace ELearningProject.Controllers
             return View();
         }
         public PartialViewResult FeaturePartial()
-        {
+		{
             var values = context.Features.ToList();
             return PartialView(values);
-        }
+		}
         public PartialViewResult ServicePartial()
         {
             var values = context.Services.ToList();
