@@ -85,6 +85,9 @@ Proje içeriği:
 - Harita için CRUD işlemleri.
 - İletişim için CRUD işlemleri.
 
+# İLİŞKİSEL VERİTABANI DİAGRAMI
+![Ekran Görüntüsü (49)](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/ece22298-7712-4d62-9ac1-1c8d33c1c17c)
+
 # UI
 
 ### ANA SAYFA
