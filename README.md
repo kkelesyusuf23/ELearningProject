@@ -125,6 +125,7 @@ Proje içeriği:
 ![10](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/4c050b31-b29e-48d2-9375-305ab88064dc)
 
 # ÖĞRENCİ
+![Ekran Görüntüsü (47)](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/25caffa4-82ef-4bc0-91f0-afbc424a883f)
 ![1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/bb3e5086-5d1b-4d31-8d3d-8e4965c88b8f)
 ![2](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/c3bf4223-b541-47b9-b51f-cc9fa7ddc943)
 ![3](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/ebcb451a-0bb8-4821-acd6-5fb1637edabf)
