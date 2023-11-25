@@ -136,15 +136,19 @@ Proje içeriği:
 ![8](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/015c4e55-b51a-4322-91ad-568e7f4a5042)
 ![9](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/b63b82df-1d68-478c-bc91-a4e44131f91a)
 
-
-
-
-
-
-
-
-
-
+# ADMİN
+![1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/e0d20e7e-e0ff-4eeb-a158-b41a3b104c54)
+![2](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/4cb6de50-c7c9-4c39-ad8f-9cc6f72488a7)
+![3](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/e76166cf-9249-44de-b8cb-77503df49c17)
+![4](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/ee0c04d9-bb5d-4615-8f89-a788ee37319c)
+![5](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/9e783438-0e21-4d90-913f-d307bcf9ade4)
+![6](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/81fe57d7-9027-40a1-9ef2-2bc5359090ed)
+![7](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/eaca96dc-8c10-4b36-92b9-7c90b4b153d6)
+![8](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/b72db3e5-30d5-4355-a2fd-c688ce39b364)
+![9](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/794c42ab-98cc-4397-a7ad-2678b90c581e)
+![10](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/5e3a7a94-7112-4bdc-acdd-8f669e800427)
+![11](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/d435a9d7-8fb4-47d0-b510-50634c08f110)
+![12](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/15bfe1f2-b73d-4996-a847-af8b45544cc9)
 
 
 
