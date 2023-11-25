@@ -27,7 +27,7 @@ Proje içeriği:
 
 Öne Çıkan Özellikler:
 - Fluent Validation ile validation rules
-- Data transfer object kullanımı
+- Data transfer object(DTO) kullanımı
 - CSS ve Bootstrap ile özelleştirilmiş arayüz
 
 ## Proje Teknik Özellikleri:
