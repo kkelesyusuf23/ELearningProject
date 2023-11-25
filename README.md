@@ -33,7 +33,7 @@ Proje içeriği:
 ## Proje Teknik Özellikleri:
 
 - Veritabanı: MsSql kullanıldı.
-- Mimarlık: 1-katmanlı mimari uygulandı.
+- Mimari: 1-katmanlı mimari uygulandı.
 - Tasarım Deseni: Repository Tasarım Deseni kullanıldı.
 - Kullanıcı Arayüzü: HTML/CSS - BOOTSTRAP kullanıldı.
 
