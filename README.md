@@ -109,6 +109,43 @@ Proje içeriği:
 ### İLETİŞİM
 ![c1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/0f618605-24d9-4ae1-8d0a-6a20893ba8aa)
 
-# GİRİŞ
+### GİRİŞ
 ![login1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/e49b6f74-c359-4d46-87e8-ee2ea0583324)
+
+
+# EĞİTMEN
+![1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/194ed415-ad51-40f9-9d61-55103eb4c977)
+![2](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/bdc56579-f9fb-44aa-9fff-a66ce30eb69c)
+![3](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/5b2d98dd-6f8a-464c-8de4-9668962ad15c)
+![4](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/c31297c8-1c3c-4305-882a-a66d8e99ecc7)
+![5](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/80400e1b-f3e3-49d8-aab3-6b1040984754)
+![7](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/73676e90-3db9-4fa5-a879-f7318e0d3c06)
+![8](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/9368a8d9-0da8-4341-8299-9ffbc23f0189)
+![9](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/b238f75e-39d6-42fc-a901-f89afc4bf7b1)
+![10](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/4c050b31-b29e-48d2-9375-305ab88064dc)
+
+# ÖĞRENCİ
+![1](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/bb3e5086-5d1b-4d31-8d3d-8e4965c88b8f)
+![2](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/c3bf4223-b541-47b9-b51f-cc9fa7ddc943)
+![3](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/ebcb451a-0bb8-4821-acd6-5fb1637edabf)
+![4](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/4540e846-756b-4cad-a673-bdbc47341319)
+![5](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/b997c009-619c-4748-aab4-c9ee96f857e0)
+![6 0](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/be318b62-dbc9-4ffd-a189-1bfb7cf911a2)
+![6 5](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/e43e1532-8026-4a1b-b56a-e10e3ec79c82)
+![7](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/69e0649b-18da-44c0-9b9e-7e9bd4e74c81)
+![8](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/015c4e55-b51a-4322-91ad-568e7f4a5042)
+![9](https://github.com/kkelesyusuf23/ELearningProject/assets/148692615/b63b82df-1d68-478c-bc91-a4e44131f91a)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
